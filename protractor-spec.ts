@@ -2,7 +2,7 @@ import { browser, by, element } from "protractor"
 import { protractor } from "protractor/built/ptor";
 describe('first protractor demo test', function() {
     beforeEach(function () {
-        return browser.ignoreSynchronization = true
+        return browser.waitForAngularEnabled(false)
     })
     it('should click the button', async function() {
         const but = element(by.buttonText('Clickclick'));
