@@ -1,0 +1,40 @@
+{
+  "name": "rogueAutomation",
+  "version": "0.0.1",
+  "description": "Rogue Automation",
+  "private": true,
+  "scripts": {
+    "update": "./node_modules/.bin/webdriver-manager update",
+    "start": "./node_modules/.bin/webdriver-manager start",
+    "compile": "gulp test:compile",
+    "watch": "gulp test:watch",
+    "test": "./node_modules/.bin/protractor ./protractor.js"
+  },
+  "dependencies": {
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "ts-helpers": "^1.1.2",
+    "mocha": "^3.2.0",
+    "protractor": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.6.5",
+    "@types/chai": "^3.4.34",
+    "@types/core-js": "^0.9.34",
+    "@types/lodash": "^4.14.41",
+    "@types/mocha": "^2.2.33",
+    "@types/mysql": "0.0.31",
+    "@types/node": "^6.0.51",
+    "@types/sequelize": "^4.0.42",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "gulp": "^3.5.6",
+    "gulp-typescript": "^3.1.4",
+    "lodash": "^4.17.2",
+    "mysql": "^2.13.0",
+    "raw-loader": "^0.5.1",
+    "sequelize": "^3.30.2",
+    "tslib": "^1.4.0",
+    "typescript": "^2.1.4"
+  }
+}
