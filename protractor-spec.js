@@ -38,7 +38,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var protractor_1 = require("protractor");
 describe('first protractor demo test', function () {
     beforeEach(function () {
-        return protractor_1.browser.ignoreSynchronization = true;
+        return protractor_1.browser.waitForAngularEnabled(false);
     });
     it('should click the button', function () {
         return __awaiter(this, void 0, void 0, function () {
