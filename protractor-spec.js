@@ -42,29 +42,44 @@ describe('first protractor demo test', function () {
     });
     it('should click the button', function () {
         return __awaiter(this, void 0, void 0, function () {
-            var but, i;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            var but, counter, arr, expectedArr, i, _a, _b;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0:
                         but = protractor_1.element(protractor_1.by.buttonText('Clickclick'));
+                        counter = protractor_1.element(protractor_1.by.id('span'));
+                        arr = [];
+                        expectedArr = ['1', '2', '4', '6', '7', '9', '10', '12', '13',
+                            '15', '16', '18', '19', '21', '22', '24', '25', '27', '28',
+                            '30', '31', '33', '34', '36', '37', '39', '40', '42', '43', '45'];
                         return [4 /*yield*/, protractor_1.browser.get('http://localhost:63342/tsClassDemo/myHtml.html')];
                     case 1:
-                        _a.sent();
+                        _c.sent();
                         i = 0;
-                        _a.label = 2;
+                        _c.label = 2;
                     case 2:
-                        if (!(i <= 29)) return [3 /*break*/, 6];
+                        if (!(i <= 29)) return [3 /*break*/, 8];
                         return [4 /*yield*/, but.click()];
                     case 3:
-                        _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(500)];
+                        _c.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(300)];
                     case 4:
-                        _a.sent();
-                        _a.label = 5;
+                        _c.sent();
+                        _a = arr;
+                        _b = i;
+                        return [4 /*yield*/, counter.getText()];
                     case 5:
+                        _a[_b] = _c.sent();
+                        return [4 /*yield*/, expect(arr[i]).toEqual(expectedArr[i])];
+                    case 6:
+                        _c.sent();
+                        _c.label = 7;
+                    case 7:
                         i++;
                         return [3 /*break*/, 2];
-                    case 6: return [2 /*return*/];
+                    case 8:
+                        console.log(arr);
+                        return [2 /*return*/];
                 }
             });
         });
