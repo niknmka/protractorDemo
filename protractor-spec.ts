@@ -1,6 +1,7 @@
-import { browser, by, element } from "protractor"
-import { protractor } from "protractor/built/ptor";
-import { assert } from  "chai"
+import { browser, by, element } from 'protractor';
+//import { protractor } from "protractor/built/ptor";
+import { assert } from  'chai';
+import {} from 'jasmine';
 describe('first protractor demo test', function() {
     beforeEach(function () {
         return browser.waitForAngularEnabled(false)
@@ -14,7 +15,7 @@ describe('first protractor demo test', function() {
             '30', '31', '33', '34', '36', '37', '39', '40', '42', '43', '45'];
 
 
-        await browser.get('http://localhost:63342/tsClassDemo/myHtml.html')
+        await browser.get('http://localhost:63342/tsClassDemo/myHtml.html');
         for (let i = 0; i <= 29; i++){
             await but.click();
             await browser.sleep(300);
